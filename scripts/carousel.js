@@ -1,8 +1,14 @@
+
+
 var owl = $('.owl-carousel');
 owl.owlCarousel({
+    items:4,
     loop:true,
-    nav:false,
+    margin:10,
     dots:false,
+    autoplay:true,
+    autoplayTimeout:2000,
+    autoplayHoverPause:true,
     responsive:{
         0:{
             items:1
@@ -18,11 +24,9 @@ owl.owlCarousel({
         }
     }
 });
-owl.on('mousewheel', '.owl-stage', function (e) {
-    if (e.deltaY>0) {
-        owl.trigger('next.owl');
-    } else {
-        owl.trigger('prev.owl');
-    }
-    e.preventDefault();
-});
+$('.play').on('click',function(){
+    owl.trigger('play.owl.autoplay',[1000])
+})
+$('.stop').on('click',function(){
+    owl.trigger('stop.owl.autoplay')
+})
