@@ -87,20 +87,6 @@ header ul li a:hover, header h1 a:hover {
 
 }
 
-.scroll {
-  text-transform: uppercase;
-  text-align: center;
-  margin: 20px auto;
-  font-size: 12px;
-  letter-spacing: 2px;
-  font-weight: 300;
-  color: #999999;
-}
-
-.scroll span {
-  font-size: 20px;
-}
-
 .owl-carousel {
   width: 80%;
   margin: 0px auto;
